@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/caracteristicas/AprobarPropuestaSalud.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/caracteristicas/CalcularPrimaUnicaSalud.feature");
 formatter.feature({
   "comments": [
     {
@@ -11,195 +11,171 @@ formatter.feature({
     },
     {
       "line": 3,
-      "value": "## ININTER-40 Aprobar propuesta - \"Pre-Aprobado\""
+      "value": "## ININTER-144 Ingresar valor individual de las primas"
+    },
+    {
+      "line": 4,
+      "value": "## ININTER-163 Cálculo Prima Única"
+    },
+    {
+      "line": 5,
+      "value": "## ININTER-467 Identificar beneficios capitados"
+    },
+    {
+      "line": 6,
+      "value": "## ININTER-471 Primas - Adición de Beneficios No Capitados"
     }
   ],
-  "line": 4,
-  "name": "Aprobar propuesta de Salud",
-  "description": "Como Gerente Senior de Productos necesito modificar el estado de la propuesta entregada por las Áreas \r\nProducto, Técnico para ser presentada a la Gerencia de Negocios y posteriormente a la entidad reguladora \r\npara su respectiva aprobación.",
-  "id": "aprobar-propuesta-de-salud",
+  "line": 7,
+  "name": "Calcular la prima única en una propuesta de Salud",
+  "description": "Como Usuario del Área Técnica necesito obtener la prima única para completar \r\nel análisis técnico que se enviará a Productos.",
+  "id": "calcular-la-prima-única-en-una-propuesta-de-salud",
   "keyword": "Característica"
 });
 formatter.before({
-  "duration": 7887168879,
+  "duration": 7318910957,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 10,
-  "name": "el usuario gerente senior de producto aprueba la propuesta para ser presentada a la Gerencia de Negocios",
+  "line": 12,
+  "name": "el usuario técnico local configura la prima única para una propuesta de Salud con subramo Local",
   "description": "",
-  "id": "aprobar-propuesta-de-salud;el-usuario-gerente-senior-de-producto-aprueba-la-propuesta-para-ser-presentada-a-la-gerencia-de-negocios",
+  "id": "calcular-la-prima-única-en-una-propuesta-de-salud;el-usuario-técnico-local-configura-la-prima-única-para-una-propuesta-de-salud-con-subramo-local",
   "type": "scenario",
   "keyword": "Escenario",
   "tags": [
     {
-      "line": 9,
+      "line": 11,
       "name": "@SmokeTest"
     },
     {
-      "line": 9,
-      "name": "@Regresión"
+      "line": 11,
+      "name": "@Regresión1"
     }
   ]
 });
 formatter.step({
-  "line": 11,
+  "line": 13,
   "name": "que el usuario de producto notifica una propuesta local de Salud al área técnica",
   "keyword": "Dado "
 });
 formatter.step({
-  "line": 12,
-  "name": "que el usuario gerente técnico local ha evaluado la propuesta para ser pre-aprobada por el área de productos",
-  "keyword": "Y "
-});
-formatter.step({
-  "line": 13,
-  "name": "que he iniciado sesión con el rol gerente senior de producto",
-  "keyword": "Y "
-});
-formatter.step({
   "line": 14,
-  "name": "he ingresado al módulo de Planes",
+  "name": "que he iniciado sesión con el rol gerente técnico local",
   "keyword": "Y "
 });
 formatter.step({
   "line": 15,
-  "name": "he consultado la propuesta notificada por el área técnica",
+  "name": "he ingresado al módulo de Planes",
   "keyword": "Y "
 });
 formatter.step({
   "line": 16,
-  "name": "he seleccionado un análisis técnico como definitivo",
+  "name": "he consultado la propuesta notificada por producto",
   "keyword": "Y "
 });
 formatter.step({
   "line": 17,
-  "name": "debería visualizar una notificación solicitando la confirmación de la selección del ánalisis técnico definitivo",
+  "name": "he ingresado a la configuración de primas de la propuesta",
   "keyword": "Y "
 });
 formatter.step({
   "line": 18,
-  "name": "debería visualizar una notificación indicando la selección del análisis técnico definitivo",
-  "keyword": "Y "
-});
-formatter.step({
-  "line": 19,
-  "name": "he aprobado la propuesta",
+  "name": "he ingresado los valores individuales de las primas para beneficios capitados y no capitados",
   "keyword": "Cuando "
 });
 formatter.step({
-  "line": 20,
-  "name": "debería visualizar una notificación indicando que la propuesta ha sido pre-aprobada",
+  "line": 19,
+  "name": "debería visualizar una notificación indicando el guardado de la prima única",
   "keyword": "Entonces "
 });
 formatter.step({
+  "line": 20,
+  "name": "debería visualizar el resultado del cálculo de la prima única",
+  "keyword": "Y "
+});
+formatter.step({
   "line": 21,
-  "name": "no debería poder modificar la propuesta",
+  "name": "debería visualizar el cálculo de la prima única no capitada",
   "keyword": "Y "
 });
 formatter.step({
   "line": 22,
-  "name": "no debería poder modificar el cuadro de beneficios",
-  "keyword": "Y "
-});
-formatter.step({
-  "line": 23,
-  "name": "no debería poder modificar la información de primas",
+  "name": "debería visualizar el cálculo de los beneficios capitados",
   "keyword": "Y "
 });
 formatter.match({
   "location": "CalcularPrimaUnicaSalud.que_el_usuario_de_producto_notifica_una_propuesta_local_de_Salud_al_área_técnica()"
 });
 formatter.result({
-  "duration": 159022729464,
+  "duration": 199096498887,
   "status": "passed"
 });
 formatter.match({
-  "location": "AdicionarContraPropuestaSalud.que_el_usuario_gerente_técnico_local_ha_evaluado_la_propuesta_para_ser_pre_aprobada_por_el_área_de_productos()"
+  "location": "DefinicionDePasosComunes.que_he_iniciado_sesión_con_el_rol_gerente_técnico_local()"
 });
 formatter.result({
-  "duration": 44802764798,
-  "status": "passed"
-});
-formatter.match({
-  "location": "DefinicionDePasosComunes.que_he_iniciado_sesión_con_el_rol_gerente_senior_de_producto()"
-});
-formatter.result({
-  "duration": 3444705229,
+  "duration": 3853057302,
   "status": "passed"
 });
 formatter.match({
   "location": "DefinicionDePasosComunes.he_ingresado_al_módulo_de_Planes()"
 });
 formatter.result({
-  "duration": 4710248920,
+  "duration": 8914483031,
   "status": "passed"
 });
 formatter.match({
-  "location": "AdicionarContraPropuestaSalud.he_consultado_la_propuesta_notificada_por_el_área_técnica()"
+  "location": "CalcularPrimaUnicaSalud.he_consultado_la_propuesta_notificada_por_producto()"
 });
 formatter.result({
-  "duration": 10961242500,
+  "duration": 5541166585,
   "status": "passed"
 });
 formatter.match({
-  "location": "SeleccionarAnalisisTecnicoDefinitivoSalud.he_seleccionado_un_análisis_técnico_como_definitivo()"
+  "location": "CalcularPrimaUnicaSalud.he_ingresado_a_la_configuración_de_primas_de_la_propuesta()"
 });
 formatter.result({
-  "duration": 12146622304,
+  "duration": 5878732342,
   "status": "passed"
 });
 formatter.match({
-  "location": "SeleccionarAnalisisTecnicoDefinitivoSalud.debería_visualizar_una_notificación_solicitando_la_confirmación_de_la_selección_del_ánalisis_técnico_definitivo()"
+  "location": "CalcularPrimaUnicaSalud.he_ingresado_los_valores_individuales_de_las_primas_para_beneficios_capitados_y_no_capitados()"
 });
 formatter.result({
-  "duration": 123055310,
+  "duration": 15981437644,
   "status": "passed"
 });
 formatter.match({
-  "location": "SeleccionarAnalisisTecnicoDefinitivoSalud.debería_visualizar_una_notificación_indicando_la_selección_del_análisis_técnico_definitivo()"
+  "location": "CalcularPrimaUnicaSalud.debería_visualizar_una_notificación_indicando_el_guardado_de_la_prima_única()"
 });
 formatter.result({
-  "duration": 5053471168,
+  "duration": 174420406,
   "status": "passed"
 });
 formatter.match({
-  "location": "AprobarPropuestaSalud.he_aprobado_la_propuesta()"
+  "location": "CalcularPrimaUnicaSalud.debería_visualizar_el_resultado_del_cálculo_de_la_prima_única()"
 });
 formatter.result({
-  "duration": 11408645603,
+  "duration": 166308215,
   "status": "passed"
 });
 formatter.match({
-  "location": "AprobarPropuestaSalud.debería_visualizar_una_notificación_indicando_que_la_propuesta_ha_sido_pre_aprobada()"
+  "location": "CalcularPrimaUnicaSalud.debería_visualizar_el_cálculo_de_la_prima_única_no_capitada()"
 });
 formatter.result({
-  "duration": 219750542,
+  "duration": 190788985,
   "status": "passed"
 });
 formatter.match({
-  "location": "NotificarPropuestaAlAreaTecnica.no_debería_poder_modificar_la_propuesta()"
+  "location": "CalcularPrimaUnicaSalud.debería_visualizar_el_cálculo_de_los_beneficios_capitados()"
 });
 formatter.result({
-  "duration": 30194055353,
-  "status": "passed"
-});
-formatter.match({
-  "location": "NotificarPropuestaAlAreaTecnica.no_debería_poder_modificar_el_cuadro_de_beneficios()"
-});
-formatter.result({
-  "duration": 66421818136,
-  "status": "passed"
-});
-formatter.match({
-  "location": "NotificarPropuestaAlAreaTecnica.no_debería_poder_modificar_la_información_de_primas()"
-});
-formatter.result({
-  "duration": 30143173023,
+  "duration": 25964622,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1574215052,
+  "duration": 1211478352,
   "status": "passed"
 });
 });

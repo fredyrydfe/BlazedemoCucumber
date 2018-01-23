@@ -1,6 +1,8 @@
 package mapaDeObjetos;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import cucumber.api.Scenario;
 
 import static mapaDeObjetos.Login.driver;
+
+import java.util.concurrent.TimeUnit;
 
 public class Global {
 	
@@ -42,7 +46,7 @@ public class Global {
 	}
 
 	public static void cerrarSesion() {
-		driver.navigate().to("http://172.24.206.93:8001/SeisServices/login");
+		driver.navigate().to("http://172.24.206.98:8002/SeisServices/login");
 	}
 
 }

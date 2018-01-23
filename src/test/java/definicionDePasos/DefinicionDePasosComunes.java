@@ -17,7 +17,7 @@ public class DefinicionDePasosComunes {
 	@Before
 	public void preparar_ambiente_de_prueba() throws Throwable {
 		Login.abrirElNavegador("Chrome");
-		Login.ingresarAlaPagina("http://172.24.206.93:8001/SeisServices/login");
+		Login.ingresarAlaPagina("http://172.24.206.98:8002/SeisServices/login");
 		Global.establecerTiempoDeEsperaExplicita(30);
 	}
 

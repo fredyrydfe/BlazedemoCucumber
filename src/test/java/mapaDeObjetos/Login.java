@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Login {
@@ -17,11 +18,16 @@ public class Login {
 		if (navegador == "Chrome") {
 			File directorioActual = new File(".");
 			System.setProperty("webdriver.chrome.driver", directorioActual.getCanonicalPath() + "\\userdata\\chromedriver2_33.exe");
-			driver = new ChromeDriver();
+			// ---------------------------------------------------
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--start-maximized");
+			driver = new ChromeDriver(chromeOptions);
+			// ---------------------------------------------------
+			//driver = new ChromeDriver();
 		} else {
 			driver = new FirefoxDriver();
 		}
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 	}
 
 	public static void ingresarAlaPagina(String valor) throws IOException {
